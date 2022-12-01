@@ -1,0 +1,131 @@
+.btn_start,
+.quiz-box,
+.sonucEkrani {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn_start{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn_start.passive{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz-box {
+    width: 550px;
+
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(0.7);
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz-box.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.quiz-box header .title {
+    font-size:22px;
+    font-weight: 600;
+}
+
+.quiz-box .question-text{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.quiz-box .option-list{
+    padding: 18px 0;
+}
+
+.quiz-box .option-list .option {
+    border: 1px solid #151d3b;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz-box .option-list .option:hover {
+    color: #112b2c;
+    background: #ffd33d;
+}
+
+.quiz-box .option-list .option.correct {
+    color: #155724;
+    background: #d4edda;
+}
+
+.quiz-box .option-list .option.incorrect {
+    color: #721c24;
+    background: #f8d7da;
+}
+
+.quiz-box .option-list .option.disabled {
+    pointer-events: none;
+}
+
+.quiz-box .next-btn{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz-box .next-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.quiz-box footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sonucEkrani {
+    width: 550px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(0.7);
+
+    opacity: 0;
+    pointer-events: none;
+
+
+}
+
+.sonucEkrani.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.sonucEkrani .icon {
+    font-size: 90px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.sonucEkrani .sonucText {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
